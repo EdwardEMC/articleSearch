@@ -1,14 +1,14 @@
 var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+search+"&api-key="+APIKey+"&limit="+limit;
 var APIKEY = "zv3jd06V7WOa0zWVKy2fSAeLP9hSZEO8";
 
-
-$("#search").on("click", function(event){
+//Onclick event to activate the ajax request and 'then' run the function to display the articles
+$("#searchBtn").on("click", function(event){
     event.preventDefault();
 
-    var search = "";
-    var limit = "";
-    var startYear = "";
-    var endYear = "";
+    var search = $("#search").val().trim();
+    var limit = $("#limit").val();
+    var startYear = $("#startYear").val();
+    var endYear = $("#endYear").val();
 
     var results = response.docs;
 
@@ -27,13 +27,20 @@ $("#search").on("click", function(event){
         article.attr("class", "example class");
         article.text(results.abstract);
 
-        title.text(results.)
+        title.text(results.headline.main)
 
         
-
-        article.text
-    }*/
-
+        $("#topArticlesDiv").append(title);
+        $("#topArticlesDiv").append(article);
+    }
+    
+    */
     }) 
 
+})
+
+//Onclick event to clear the Top Articles div
+$("#clearBtn").on("click", function(event){
+    event.preventDefault();
+    $("#topArticlesDiv").empty();
 })
