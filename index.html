@@ -13,8 +13,12 @@
 
 <body>
 
-  <h1>New York Times Search</h1>
+  <div class="head">
+    <h1>New York Times Search</h1>
+  </div>
+  <br>
   <div class="container">
+    <h2>Search parameters</h2>
     <form action="/action_page.php">
       <label for="Search">Search</label><br>
       <input type="text" id="search"><br>
@@ -25,11 +29,10 @@
       <label for="End year">End Year(optional)</label><br>
       <input type="text" id="endYear"><br>
     </form>
-  </div>
-  <div class="buttons"></div>
-  <button id="searchBtn">Search</button>
-  <button id="clearBtn">Clear</button>
-  <div id="topArticlesDiv"></div>
+    <br>
+    <button id="searchBtn">Search</button>
+    <button id="clearBtn">Clear</button>
+    <div id="topArticlesDiv"></div>
   </div>
 </body>
 
