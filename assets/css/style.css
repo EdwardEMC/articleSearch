@@ -1,4 +1,4 @@
-h1 {
+.head {
     text-align: center;
     font-family: "Times New Roman", Times, serif;
     background-color: navy;
@@ -9,7 +9,13 @@ h1 {
 .container {
     width: 100%;
     clear: both;
-
+    border-style: outset;
+    border-width: medium
   }
 
-  
+  h2 {
+    background-color: lightgrey;
+    font-size: large;
+    
+
+  }
