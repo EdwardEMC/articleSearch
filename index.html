@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Article Search</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/style.css"/>
-    <link rel="icon" type="image/png" href="">
+  <meta charset="utf-8">
+  <title>Article Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/png" href="">
 </head>
+
 <body>
-  
-    <h1>New York Times Search</h1>
-    <div class = "container">
-        <form action="/action_page.php">
-          <label for="Search">Search</label>
-          <input type="text"  id="search"><br>
-          <label for="Number of records to retreive">Number of records to retreive</label>
-          <input type="text"  id="limit"><br>
-          <label for="Start year">Start Year(optional)</label>
-          <input type="text"  id="startYear"><br> 
-          <label for="End year">End Year(optional)</label>
-          <input type="text"  id="endYear"><br> 
-        </form>
-      </div>
-    <button id="searchBtn">Search</button>
-    <button id="clearBtn">Clear</button>
-    <div id="topArticlesDiv"></div>
+
+  <h1>New York Times Search</h1>
+  <div class="container">
+    <form action="/action_page.php">
+      <label for="Search">Search</label><br>
+      <input type="text" id="search"><br>
+      <label for="Number of records to retreive">Number of records to retreive</label><br>
+      <input type="text" id="limit"><br>
+      <label for="Start year">Start Year(optional)</label><br>
+      <input type="text" id="startYear"><br>
+      <label for="End year">End Year(optional)</label><br>
+      <input type="text" id="endYear"><br>
+    </form>
+  </div>
+  <div class="buttons"></div>
+  <button id="searchBtn">Search</button>
+  <button id="clearBtn">Clear</button>
+  <div id="topArticlesDiv"></div>
+  </div>
 </body>
+
 </html>
