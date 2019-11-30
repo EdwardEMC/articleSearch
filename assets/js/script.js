@@ -13,9 +13,11 @@ $("#searchBtn").on("click", function(){
     url: queryURL,
     METHOD: "GET"
     }).then(function(response){
-        console.log(response);
+        console.log(response.response.docs);
     
-    var results = response.docs;
+    var results = response.response.docs;
+
+    printResults(results);
     /*more code to display articles
 
     for(i=0; i<response.data.length; i++) {
@@ -42,3 +44,30 @@ $("#clearBtn").on("click", function(event){
     event.preventDefault();
     $("#topArticlesDiv").empty();
 })
+
+function printResults(results) {
+    for(var i=0; i<results.length; i++) {
+        var newArticle = $("<div>");
+        var headline = $("<h2>");
+        var image = $("<img>");
+        var articleContent = $("<p>");
+        var snippet = $("<p>");
+
+        newArticle.attr("class", "row");
+        headline.text(results[i].headline.main);
+        headline.attr("class", "col-12 text-center");
+        image.attr("src", "https://www.nytimes.com/" + results[i].multimedia[0].url);
+        image.attr("class", "col-12 text-center");
+
+        articleContent.text(results[i].lead_paragraph);
+        snippet.text(results[i].abstract);
+
+        newArticle.append(headline);
+        newArticle.append(image);
+        newArticle.append(articleContent);
+        newArticle.append(snippet);
+
+        $("#topArticlesDiv").append(newArticle);
+    }
+    
+}
